@@ -2,14 +2,14 @@
 
 [![sampctl](https://img.shields.io/badge/sampctl-android--check-2f2f2f.svg?style=for-the-badge)](https://github.com/ff-agus44/android-check)
 
-A forked project from original source code my master Fairuz :pray:
+A forked project from original source code Fairuz which is shit (jk, i wuv u uwu)
 
 ## Installation
 
 Simply install to your project:
 
 ```bash
-sampctl package install ff-agus44/android-check
+sampctl package install Kirima2nd/android-check
 ```
 
 Include in your code and begin using the library:
