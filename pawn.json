@@ -1,0 +1,19 @@
+{
+    "site": "https://github.com/Se8870/android-check",
+    "user": "Se8870",
+    "repo": "android-check",
+    "entry": "test.pwn",
+    "output": "gamemodes/test.amx",
+    "dependencies": [
+        "sampctl/samp-stdlib"
+    ],
+    "dev_dependencies": [
+        "pawn-lang/YSI-Includes@5.x"
+    ],
+    "contributors": [
+        "Fairuz-Afdhal",
+        "ff-agus44",
+        "Kirima"
+    ],
+    "local": true
+}
