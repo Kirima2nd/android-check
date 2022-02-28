@@ -218,7 +218,7 @@ static LoadClientCheckFix()
     else
     {
         printf("Cannot load callbackfix.amx");
-        printf("Ignore if YSI or FIXES already load this.");
+        printf("Ignore if YSI or fixes.inc already load this.");
     }
 }
 
