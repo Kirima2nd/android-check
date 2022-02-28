@@ -2,14 +2,15 @@
 
 [![sampctl](https://img.shields.io/badge/sampctl-android--check-2f2f2f.svg?style=for-the-badge)](https://github.com/ff-agus44/android-check)
 
-A forked project from original source code Fairuz which is shit (jk, i wuv u uwu)
+A forked forked project, using y_android implementations to simplify everything.
+Support`IsPlayerUsingAndroid(playerid)` just like original repo by Fairuz.
 
 ## Installation
 
 Simply install to your project:
 
 ```bash
-sampctl package install Kirima2nd/android-check
+sampctl package install Se8870/android-check
 ```
 
 Include in your code and begin using the library:
@@ -18,28 +19,37 @@ Include in your code and begin using the library:
 #include <android-check>
 ```
 
-And before running, make sure you have this line:
-```
-local: true
-```
-
-in your pawn.json or pawn.yaml if you are sampctl users, otherwise just ignore this.
-
 ## Usage
 
+### Using callback
 ```pawn
 #include <a_samp>
 #include <android-check>
 
-public OnClientChecked(playerid, Client:type)
+public OnClientChecked(playerid, bool:isAndroid)
 {
-	if (type == CLIENT_TYPE_ANDROID)
+	if (isAndroid)
 	{
 		return Ban(playerid);
 	}
 	return 1;
 }
+```
 
+### Using normal functions
+```pawn
+#include <a_samp>
+#include <android-check>
+
+public OnPlayerSpawn(playerid)
+{
+	if (IsPlayerUsingAndroid(playerid))
+	{
+		printf("Player using android");
+		return Ban(playerid);
+	}
+	return 1;
+}
 ```
 
 ***NOTE:** you cannot use this inside OnPlayerConnect, that is why i made a custom one :>*
@@ -49,5 +59,5 @@ public OnClientChecked(playerid, Client:type)
 To test, simply run the package:
 
 ```bash
-sampctl package run
+sampctl run
 ```
