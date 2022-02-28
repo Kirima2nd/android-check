@@ -61,7 +61,6 @@ public OnGameModeInit()
 
 public OnPlayerConnect(playerid)
 {
-    printf("OnPlayerConnect called");
     g_sPlayerFromAndroid[playerid] = true;
 
 	SendClientCheck(playerid, 0x48, 0, 0, 2);
@@ -124,11 +123,8 @@ public Android_InternalTimer(playerid)
 
 public OnClientCheckResponse(playerid, actionid, memaddr, retndata)
 {
-    printf("Is this even called?");
-
 	if (actionid == 0x48) 
 	{
-        printf("Got responses!");
         if (g_sPlayerTimerCheck[playerid])
         {
             KillTimer(g_sPlayerTimerCheck[playerid]);
