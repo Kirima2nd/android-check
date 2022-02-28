@@ -1,6 +1,6 @@
 # android-check
 
-[![sampctl](https://img.shields.io/badge/sampctl-android--check-2f2f2f.svg?style=for-the-badge)](https://github.com/ff-agus44/android-check)
+[![sampctl](https://img.shields.io/badge/sampctl-android--check-2f2f2f.svg?style=for-the-badge)](https://github.com/Se8870/android-check)
 
 A forked forked project, using y_android implementations to simplify everything.
 Support`IsPlayerUsingAndroid(playerid)` just like original repo by Fairuz.
@@ -61,3 +61,10 @@ To test, simply run the package:
 ```bash
 sampctl run
 ```
+
+## Credits
+
+* Y_Less (rconfix hook, and y_android implementations)
+* Kirima (current maintainer)
+* ff-agus44 (previous maintainer)
+* Fairuz-Afdhal (for the original version)
