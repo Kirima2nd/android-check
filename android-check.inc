@@ -61,8 +61,6 @@ public OnGameModeInit()
 
 public OnPlayerConnect(playerid)
 {
-    g_sPlayerFromAndroid[playerid] = true;
-
 	SendClientCheck(playerid, 0x48, 0, 0, 2);
 	g_sPlayerTimerCheck[playerid] = SetTimerEx(#Android_InternalTimer, ANDROID_CHECK_INTERVAL, true, "i", playerid);
 
@@ -152,6 +150,8 @@ public OnPlayerDisconnect(playerid, reason)
         KillTimer(g_sPlayerTimerCheck[playerid]);
         g_sPlayerTimerCheck[playerid] = 0;
     }
+
+    g_sPlayerFromAndroid[playerid] = bool:-1;
 
     #if defined Ks_OnPlayerDisconnect
         return Ks_OnPlayerDisconnect(playerid, reason);
